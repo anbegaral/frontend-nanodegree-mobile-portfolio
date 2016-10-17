@@ -18,7 +18,10 @@ The main changes have been done in `main.js`:
   4. **line 531:** removed the call to `updatePositions()` as it does not seem to do anything here
 
 ## Scaling images
-The images have been scale to different sizes to improve the loading using **Gulp**
+The images have been scale to different sizes to improve the loading using **Gulp** tasks
 
 ## Minifying code
-The javascript and css code have been minified with **Gulp**
+The javascript and css code have been minified using **Gulp** tasks.
+
+## Installation
+To view the final result, the user just needs to download the content of `dist` folder and open the index.html in dist folder on a browser.
