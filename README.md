@@ -12,7 +12,7 @@ A web page was given with some performance issues and the goals were:
 
 ## Improving code
 The main changes have been done in `main.js`:
-  1. **line 430:** some functions have been removed and the `changePizzaSizes()` function has been modified to include the pizzas resize feature simplificating the way it is done and avoiding more function calls.
+  1. **line 430:** `determineDx()` and `sizeSwitcher()` have been removed and the `changePizzaSizes()` function has been modified to include the pizzas resize feature simplificating the way it is done and avoiding more function calls.
   2. **lines 444 and 495:** the variables `randomPizza` and `items` have been created to avoid repetitive code
   3. **line 497:** the variable `bodyScrollTop` has been created to be calculated outside the loop
   4. **line 531:** removed the call to `updatePositions()` as it does not seem to do anything here

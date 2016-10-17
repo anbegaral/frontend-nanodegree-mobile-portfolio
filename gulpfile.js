@@ -4,7 +4,9 @@ var watch = require('gulp-watch');
 var concat = require('gulp-concat');
 var cleanCss = require('gulp-clean-css');
 var jshint = require('gulp-jshint');
-var images = require('gulp-image');
+var images = require('gulp-imagemin');
+var imageResize = require('gulp-image-resize');
+var rename = require('gulp-rename');
 
 gulp.task('jshint', function() {
   gulp.src(['./js/**/*.js', './views/js/**/*.js'])
@@ -49,10 +51,24 @@ gulp.task('imgs', function(){
     .pipe(gulp.dest('./dist/img/'));
 });
 
-gulp.task('images', function(){
-  gulp.src('./views/images/**/*.*')
-    .pipe(images())
-    .pipe(gulp.dest('./dist/views/images/'));
+gulp.task('images-resize720', function() {
+  return gulp.src('./views/images/pizzeria.jpg')
+    .pipe(imageResize({ width: 720 }))
+    .pipe(images({
+      progressive: true
+    }))
+    .pipe(rename({
+      suffix: '_2x'
+    }))
+    .pipe(gulp.dest('./dist/views/images/'))
+});
+gulp.task('images-resize100', function() {
+  return gulp.src('./views/images/*.*')
+    .pipe(imageResize({ width: 100 }))
+    .pipe(images({
+        progressive:true
+    }))
+    .pipe(gulp.dest('./dist/views/images/'))
 });
 
 gulp.task('watch', function(){
@@ -61,4 +77,4 @@ gulp.task('watch', function(){
     });
 });
 
-gulp.task('default', ['uglify-concat', 'minify-css', 'copyHtml', 'imgs', 'images']);
+gulp.task('default', ['uglify-concat', 'minify-css', 'copyHtml', 'imgs', 'images-resize100', 'images-resize720']);
