@@ -24,4 +24,4 @@ The images have been scale to different sizes to improve the loading using **Gul
 The javascript and css code have been minified using **Gulp** tasks.
 
 ## Installation
-To view the final result, the user just needs to download the content of `dist` folder and open the index.html in dist folder on a browser.
+To view the final result, the user just needs to download the content of `dist` folder and open the `index.html` on a browser.
