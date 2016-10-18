@@ -19,6 +19,7 @@ A web page was given with some performance issues and the goals were:
   - `index.html`:
     1. **line 10:** the `css` file has been minified and preloaded
     2. **line 14:** the `js` file has been minified and loaded asynchronously
+    3. Got rid of Google analytics
   - `style.css`:
     1. the call to Google font is done in the `css` file using @import  url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
 
