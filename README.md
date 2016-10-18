@@ -32,4 +32,4 @@ The javascript and css code have been minified using **Gulp** tasks.
 To view the final result, the user just needs to download the content of `dist` folder and open the `index.html` on a browser.
 
 ## PageSpeed url
-http://ana.northeurope.cloudapp.azure.com/project4/
+The project is hosted here: http://ana.northeurope.cloudapp.azure.com/project4/
