@@ -11,17 +11,25 @@ A web page was given with some performance issues and the goals were:
 - Comments in `views/js/main.js` for `pizza.html` are present and effectively explain longer code procedures. :white_check_mark:
 
 ## Improving code
-The main changes have been done in `main.js`:
-  1. **line 430:** `determineDx()` and `sizeSwitcher()` have been removed and the `changePizzaSizes()` function has been modified to include the pizzas resize feature simplificating the way it is done and avoiding more function calls.
-  2. **lines 444 and 495:** the variables `randomPizza` and `items` have been created to avoid repetitive code
-  3. **line 497:** the variable `bodyScrollTop` has been created to be calculated outside the loop
-  4. **line 531:** removed the call to `updatePositions()` as it does not seem to do anything here
+  - Remove render-blocking JavaScript `http://www.google-analytics.com/analytics.js`
+  - The main changes have been done in `main.js`:
+    1. **line 430:** `determineDx()` and `sizeSwitcher()` have been removed and the `changePizzaSizes()` function has been modified to include the pizzas resize feature simplificating the way it is done and avoiding more function calls.
+    2. **lines 444 and 495:** the variables `randomPizza` and `items` have been created to avoid repetitive code
+    3. **line 497:** the variable `bodyScrollTop` has been created to be calculated outside the loop
+  - `index.html`:
+    1. **line 10:** the `css` file has been minified and preloaded
+    2. **line 14:** the `js` file has been minified and loaded asynchronously
+  - `style.css`:
+    1. the call to Google font is done in the `css` file using @import  url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 ## Scaling images
-The images have been scale to different sizes to improve the loading using **Gulp** tasks
+The images have been scaled to different sizes to improve the loading using **Gulp** tasks
 
 ## Minifying code
 The javascript and css code have been minified using **Gulp** tasks.
 
 ## Installation
 To view the final result, the user just needs to download the content of `dist` folder and open the `index.html` on a browser.
+
+## PageSpeed url
+http://ana.northeurope.cloudapp.azure.com/project4/
