@@ -16,6 +16,7 @@ A web page was given with some performance issues and the goals were:
     1. **line 430:** `determineDx()` and `sizeSwitcher()` have been removed and the `changePizzaSizes()` function has been modified to include the pizzas resize feature simplificating the way it is done and avoiding more function calls.
     2. **lines 444 and 495:** the variables `randomPizza` and `items` have been created to avoid repetitive code
     3. **line 497:** the variable `bodyScrollTop` has been created to be calculated outside the loop
+    4. **line 527:** the number of pizzas displayed is now calculated depending on the screen size
   - `index.html`:
     1. **line 10:** the `css` file has been minified and preloaded
     2. **line 14:** the `js` file has been minified and loaded asynchronously

@@ -52,7 +52,7 @@ gulp.task('imgs', function(){
 });
 
 gulp.task('images-resize720', function() {
-  return gulp.src('./views/images/pizzeria.jpg')
+  return gulp.src('./views/images/*.*')
     .pipe(imageResize({ width: 720 }))
     .pipe(images({
       progressive: true
@@ -62,8 +62,9 @@ gulp.task('images-resize720', function() {
     }))
     .pipe(gulp.dest('./dist/views/images/'))
 });
+
 gulp.task('images-resize100', function() {
-  return gulp.src('./views/images/*.*')
+  return gulp.src('./views/images/pizzeria.jpg')
     .pipe(imageResize({ width: 100 }))
     .pipe(images({
         progressive:true
